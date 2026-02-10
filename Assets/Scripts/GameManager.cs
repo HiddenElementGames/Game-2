@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     // GameManager singleton, can be referenced with "GameManager.Instance" from any script
     public static GameManager Instance { get; private set; }
 
-    // Resource counts for the player. Logic should be in it's own script, the manager just holds the data so other
+    // Inventory counts for the player. Logic should be in it's own script, the manager just holds the data so other
     // scripts don't have to know about each other.
     // Can be referenced with "GameManager.Instance.SurvivorCount" for example from any script
     public int SurvivorCount;
