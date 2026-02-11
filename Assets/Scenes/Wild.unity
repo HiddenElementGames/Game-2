@@ -119,6 +119,120 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &82552713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82552714}
+  - component: {fileID: 82552715}
+  m_Layer: 0
+  m_Name: Police Station
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82552714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82552713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1610302526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82552715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82552713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
+  scavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0
+  survivorTimeScaleRate: 0
+  minFoodGathered: 0
+  maxFoodGathered: 1
+  minAmmoGathered: 0
+  maxAmmoGathered: 5
+  minSurvivorsFound: 0
+  maxSurvivorsFound: 1
+  zombieIncreaseChance: 0
+  minZombieIncreaseCount: 0
+  maxZombieIncreaseCount: 0
+  zombieAttackChance: 0
+--- !u!1 &159472122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159472123}
+  - component: {fileID: 159472124}
+  m_Layer: 0
+  m_Name: Gas Station
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159472123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159472122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1610302526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159472124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159472122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
+  scavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0
+  survivorTimeScaleRate: 0
+  minFoodGathered: 1
+  maxFoodGathered: 5
+  minAmmoGathered: 0
+  maxAmmoGathered: 1
+  minSurvivorsFound: 0
+  maxSurvivorsFound: 3
+  zombieIncreaseChance: 0
+  minZombieIncreaseCount: 0
+  maxZombieIncreaseCount: 0
+  zombieAttackChance: 0
 --- !u!1 &220444503
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +437,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4151
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -408,6 +522,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameCamera
   sceneID: 6
+--- !u!1 &377824818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377824819}
+  - component: {fileID: 377824820}
+  m_Layer: 0
+  m_Name: Home
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377824819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377824818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1610302526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377824820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377824818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
+  scavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0
+  survivorTimeScaleRate: 0
+  minFoodGathered: 1
+  maxFoodGathered: 6
+  minAmmoGathered: 0
+  maxAmmoGathered: 0
+  minSurvivorsFound: 0
+  maxSurvivorsFound: 0
+  zombieIncreaseChance: 0
+  minZombieIncreaseCount: 0
+  maxZombieIncreaseCount: 0
+  zombieAttackChance: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +855,6 @@ GameObject:
   - component: {fileID: 745743717}
   - component: {fileID: 745743716}
   - component: {fileID: 745743715}
-  - component: {fileID: 745743718}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -756,7 +926,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745743718}
+      - m_Target: {fileID: 377824820}
         m_TargetAssemblyTypeName: ScavengeAction, Assembly-CSharp
         m_MethodName: ActivateTask
         m_Mode: 1
@@ -806,13 +976,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745743713}
   m_CullTransparentMesh: 1
---- !u!114 &745743718
+--- !u!1 &775657539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775657540}
+  - component: {fileID: 775657541}
+  m_Layer: 0
+  m_Name: Graveyard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &775657540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775657539}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1610302526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775657541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745743713}
+  m_GameObject: {fileID: 775657539}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
@@ -821,12 +1023,12 @@ MonoBehaviour:
   scavengeTimeSeconds: 5
   minScavengeTimeSeconds: 0
   survivorTimeScaleRate: 0
-  minFoodGathered: 1
-  maxFoodGathered: 6
+  minFoodGathered: 0
+  maxFoodGathered: 0
   minAmmoGathered: 0
   maxAmmoGathered: 0
-  minSurvivorsFound: 0
-  maxSurvivorsFound: 0
+  minSurvivorsFound: 1
+  maxSurvivorsFound: 6
   zombieIncreaseChance: 0
   minZombieIncreaseCount: 0
   maxZombieIncreaseCount: 0
@@ -1197,7 +1399,6 @@ GameObject:
   - component: {fileID: 1058839043}
   - component: {fileID: 1058839042}
   - component: {fileID: 1058839041}
-  - component: {fileID: 1058839044}
   m_Layer: 5
   m_Name: Graveyard
   m_TagString: Untagged
@@ -1269,7 +1470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1058839044}
+      - m_Target: {fileID: 775657541}
         m_TargetAssemblyTypeName: ScavengeAction, Assembly-CSharp
         m_MethodName: ActivateTask
         m_Mode: 1
@@ -1319,31 +1520,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058839039}
   m_CullTransparentMesh: 1
---- !u!114 &1058839044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058839039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
-  minFoodGathered: 0
-  maxFoodGathered: 0
-  minAmmoGathered: 0
-  maxAmmoGathered: 0
-  minSurvivorsFound: 1
-  maxSurvivorsFound: 6
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
-  zombieAttackChance: 0
 --- !u!1 &1090763935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1532,6 @@ GameObject:
   - component: {fileID: 1090763939}
   - component: {fileID: 1090763938}
   - component: {fileID: 1090763937}
-  - component: {fileID: 1090763940}
   m_Layer: 5
   m_Name: Police Station
   m_TagString: Untagged
@@ -1428,7 +1603,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1090763940}
+      - m_Target: {fileID: 82552715}
         m_TargetAssemblyTypeName: ScavengeAction, Assembly-CSharp
         m_MethodName: ActivateTask
         m_Mode: 1
@@ -1478,31 +1653,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090763935}
   m_CullTransparentMesh: 1
---- !u!114 &1090763940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090763935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
-  minFoodGathered: 0
-  maxFoodGathered: 1
-  minAmmoGathered: 0
-  maxAmmoGathered: 5
-  minSurvivorsFound: 0
-  maxSurvivorsFound: 1
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
-  zombieAttackChance: 0
 --- !u!1 &1597848711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1665,6 @@ GameObject:
   - component: {fileID: 1597848715}
   - component: {fileID: 1597848714}
   - component: {fileID: 1597848713}
-  - component: {fileID: 1597848716}
   m_Layer: 5
   m_Name: Gas Station
   m_TagString: Untagged
@@ -1587,7 +1736,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1597848716}
+      - m_Target: {fileID: 159472124}
         m_TargetAssemblyTypeName: ScavengeAction, Assembly-CSharp
         m_MethodName: ActivateTask
         m_Mode: 1
@@ -1637,31 +1786,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597848711}
   m_CullTransparentMesh: 1
---- !u!114 &1597848716
-MonoBehaviour:
+--- !u!1 &1610302525
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597848711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
-  minFoodGathered: 1
-  maxFoodGathered: 5
-  minAmmoGathered: 0
-  maxAmmoGathered: 1
-  minSurvivorsFound: 0
-  maxSurvivorsFound: 3
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
-  zombieAttackChance: 0
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610302526}
+  m_Layer: 0
+  m_Name: Scavenge Tasks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1610302526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610302525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 159472123}
+  - {fileID: 82552714}
+  - {fileID: 1890279049}
+  - {fileID: 377824819}
+  - {fileID: 775657540}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735529382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1834,6 @@ GameObject:
   - component: {fileID: 1735529386}
   - component: {fileID: 1735529385}
   - component: {fileID: 1735529384}
-  - component: {fileID: 1735529387}
   m_Layer: 5
   m_Name: Grocery Store
   m_TagString: Untagged
@@ -1746,7 +1905,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1735529387}
+      - m_Target: {fileID: 1890279050}
         m_TargetAssemblyTypeName: ScavengeAction, Assembly-CSharp
         m_MethodName: ActivateTask
         m_Mode: 1
@@ -1796,13 +1955,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735529382}
   m_CullTransparentMesh: 1
---- !u!114 &1735529387
+--- !u!1 &1890279048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1890279049}
+  - component: {fileID: 1890279050}
+  m_Layer: 0
+  m_Name: Grocery Store
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1890279049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890279048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1610302526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1890279050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735529382}
+  m_GameObject: {fileID: 1890279048}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
@@ -2066,3 +2257,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 410087041}
+  - {fileID: 1610302526}

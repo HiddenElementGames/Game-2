@@ -29,7 +29,12 @@ public class ScavengeAction : MonoBehaviour
     /// </summary>
     public void ActivateTask()
     {
-        active = true;
+        ScavengeAction[] actions = FindObjectsByType<ScavengeAction>(FindObjectsSortMode.None);
+		foreach (ScavengeAction action in actions)
+		{
+            action.DeactivateTask();
+		}
+		active = true;
     }
 
     /// <summary>
