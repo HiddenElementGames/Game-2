@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScavengeAction : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class ScavengeAction : MonoBehaviour
     [SerializeField, Tooltip(""), Min(0)] private int maxZombieIncreaseCount; // logic not implemented
     [SerializeField, Tooltip(""), Range(0,1)] private float zombieAttackChance; // logic not implemented
 
+    [Header("UI")]
+    [SerializeField] private Slider taskProgressBar;
+
     private float currentScavengeTimeSeconds;
     private bool active;
 
@@ -29,21 +33,28 @@ public class ScavengeAction : MonoBehaviour
     /// </summary>
     public void ActivateTask()
     {
-        ScavengeAction[] actions = FindObjectsByType<ScavengeAction>(FindObjectsSortMode.None);
+        // update the sliders task time in case the time required has changed
+        UpdateSliderMaxValue();
+
+        // deactivate other active tasks
+		ScavengeAction[] actions = FindObjectsByType<ScavengeAction>(FindObjectsSortMode.None);
 		foreach (ScavengeAction action in actions)
 		{
             action.DeactivateTask();
 		}
+
+        // activate this task
 		active = true;
     }
 
     /// <summary>
-    /// Deactivates the task, used on buttons
+    /// Deactivates the task
     /// </summary>
     public void DeactivateTask()
     {
         active = false;
         currentScavengeTimeSeconds = 0;
+        taskProgressBar.value = 0;
     }
 
 	/// <summary>
@@ -55,9 +66,26 @@ public class ScavengeAction : MonoBehaviour
         GameManager.Instance.FoodCount += Random.Range(minFoodGathered, maxFoodGathered + 1);
         GameManager.Instance.AmmoCount += Random.Range(minAmmoGathered, maxAmmoGathered + 1);
         GameManager.Instance.SurvivorCount += Random.Range(minSurvivorsFound, maxSurvivorsFound + 1);
+
+        // Update the task time in case it has changed. Example, if the player has more survivors now, the task should be faster
+        UpdateSliderMaxValue();
+	}
+
+    /// <summary>
+    /// Updates the max value for the slider based on the complete task time
+    /// </summary>
+    private void UpdateSliderMaxValue()
+    {
+        taskProgressBar.maxValue = scavengeTimeSeconds;
     }
 
-    void Update()
+    private void Start()
+    {
+        // Update the task slider max value to represent the time it takes to complete this task
+        UpdateSliderMaxValue();
+	}
+
+    private void Update()
     {
         if(active)
         {
@@ -68,6 +96,9 @@ public class ScavengeAction : MonoBehaviour
                 currentScavengeTimeSeconds -= scavengeTimeSeconds;
                 CompleteTask();
             }
+
+            // Update the task slider graphics
+            taskProgressBar.value = currentScavengeTimeSeconds;
         }
     }
 }
