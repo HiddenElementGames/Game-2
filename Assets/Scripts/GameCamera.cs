@@ -21,6 +21,9 @@ public class GameCamera : MonoBehaviour
 	private void AddCameraToMenuNavigation()
     {
         MenuNavigation menu = FindAnyObjectByType<MenuNavigation>();
-        menu.SceneCameras.Add(sceneID, gameObject);
+        if (menu != null)
+        {
+            menu.SceneCameras.Add(sceneID, gameObject);
+        }
 	}
 }
