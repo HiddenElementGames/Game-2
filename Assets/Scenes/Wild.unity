@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
+  defaultScavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0.1
+  survivorTimeScaleRate: 0.01
   minFoodGathered: 0
   maxFoodGathered: 1
   minAmmoGathered: 0
@@ -221,9 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
+  defaultScavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0.1
+  survivorTimeScaleRate: 0.01
   minFoodGathered: 1
   maxFoodGathered: 5
   minAmmoGathered: 0
@@ -657,9 +657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
+  defaultScavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0.1
+  survivorTimeScaleRate: 0.01
   minFoodGathered: 1
   maxFoodGathered: 6
   minAmmoGathered: 0
@@ -1660,9 +1660,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
+  defaultScavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0.1
+  survivorTimeScaleRate: 0.01
   minFoodGathered: 0
   maxFoodGathered: 0
   minAmmoGathered: 0
@@ -3308,9 +3308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850dfa7b92abaa148934bba63e21ca32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScavengeAction
-  scavengeTimeSeconds: 5
-  minScavengeTimeSeconds: 0
-  survivorTimeScaleRate: 0
+  defaultScavengeTimeSeconds: 5
+  minScavengeTimeSeconds: 0.1
+  survivorTimeScaleRate: 0.01
   minFoodGathered: 2
   maxFoodGathered: 5
   minAmmoGathered: 0
