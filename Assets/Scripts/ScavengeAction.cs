@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class ScavengeAction : MonoBehaviour
 {
     [Header("Time")]
-    [SerializeField, Tooltip("The default time it takes to complete this task"), Min(0)] private float scavengeTimeSeconds;
-	[SerializeField, Tooltip("The minimum time this task can take regardless of survivor count"), Min(0)] private float minScavengeTimeSeconds; // logic not implemented
-	[SerializeField, Tooltip("The rate that survivors affect the time scale for this task. Rate currently unknown, range unknown.")] private float survivorTimeScaleRate; // logic not implemented
+    [SerializeField, Tooltip("The default time it takes to complete this task"), Min(0)] private float defaultScavengeTimeSeconds;
+	[SerializeField, Tooltip("The minimum time this task can take regardless of survivor count"), Min(0)] private float minScavengeTimeSeconds;
+	[SerializeField, Tooltip("The rate that survivors affect the time scale for this task."), Min(0)] private float survivorTimeScaleRate;
 
     [Header("Resources")]
     [SerializeField, Tooltip("The minimum amount of food the player can gather from this task"), Min(0)] private int minFoodGathered;
@@ -25,8 +25,9 @@ public class ScavengeAction : MonoBehaviour
     [Header("UI")]
     [SerializeField] private Slider taskProgressBar;
 
-    private float currentScavengeTimeSeconds;
-    private bool active;
+    private float currentScavengeTimeSeconds; // time spent doing the current task
+    private float scavengeTimeSecondsScaled; // The time it takes to complete this task, scaled based on survivor count
+    private bool active; // whether this task is active or not
 
     /// <summary>
     /// Activates the task, used on buttons
@@ -76,7 +77,20 @@ public class ScavengeAction : MonoBehaviour
     /// </summary>
     private void UpdateSliderMaxValue()
     {
-        taskProgressBar.maxValue = scavengeTimeSeconds;
+        ScaleScavengeTime();
+		taskProgressBar.maxValue = scavengeTimeSecondsScaled;
+    }
+
+    /// <summary>
+    /// Scales the scavenge time based on current number of survivors at the scale rate
+    /// TaskTime = defaultTime / (1 + scaleRate)^SurvivorCount
+    /// </summary>
+    private void ScaleScavengeTime()
+    {
+        scavengeTimeSecondsScaled = Mathf.Clamp(
+                                        defaultScavengeTimeSeconds / Mathf.Pow(1 + survivorTimeScaleRate, GameManager.Instance.SurvivorCount), // value for clamp
+                                        minScavengeTimeSeconds, // min for clamp
+                                        Mathf.Infinity); // max for clamp
     }
 
     private void Start()
@@ -91,9 +105,9 @@ public class ScavengeAction : MonoBehaviour
         {
             // update task time. If task is complete, give player resources
             currentScavengeTimeSeconds += Time.deltaTime;
-            if(currentScavengeTimeSeconds >= scavengeTimeSeconds)
+            if(currentScavengeTimeSeconds >= scavengeTimeSecondsScaled)
             {
-                currentScavengeTimeSeconds -= scavengeTimeSeconds;
+                currentScavengeTimeSeconds -= scavengeTimeSecondsScaled;
                 CompleteTask();
             }
 
