@@ -68,9 +68,24 @@ public class ScavengeAction : MonoBehaviour
         GameManager.Instance.AmmoCount += Random.Range(minAmmoGathered, maxAmmoGathered + 1);
         GameManager.Instance.SurvivorCount += Random.Range(minSurvivorsFound, maxSurvivorsFound + 1);
 
+        RollRisks();
+
         // Update the task time in case it has changed. Example, if the player has more survivors now, the task should be faster
         UpdateSliderMaxValue();
 	}
+
+    /// <summary>
+    /// "Rolls" the chance for the risks of doing this task, such as increasing zombie count, starting an attack, losing survivors, etc.
+    /// </summary>
+    private void RollRisks()
+    {
+        // Roll for increasing the zombie count
+        if(Random.Range(0f,1f) < zombieIncreaseChance)
+        {
+            // add random number of zombies
+            GameManager.Instance.ZombieCount += Random.Range(minZombieIncreaseCount, maxZombieIncreaseCount + 1);
+        }
+    }
 
     /// <summary>
     /// Updates the max value for the slider based on the complete task time

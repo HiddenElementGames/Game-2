@@ -172,9 +172,9 @@ MonoBehaviour:
   maxAmmoGathered: 5
   minSurvivorsFound: 0
   maxSurvivorsFound: 1
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
+  zombieIncreaseChance: 0.25
+  minZombieIncreaseCount: 2
+  maxZombieIncreaseCount: 5
   zombieAttackChance: 0
   taskProgressBar: {fileID: 1217473137}
 --- !u!1 &159472122
@@ -230,9 +230,9 @@ MonoBehaviour:
   maxAmmoGathered: 1
   minSurvivorsFound: 0
   maxSurvivorsFound: 3
-  zombieIncreaseChance: 0
+  zombieIncreaseChance: 0.1
   minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
+  maxZombieIncreaseCount: 3
   zombieAttackChance: 0
   taskProgressBar: {fileID: 1506090045}
 --- !u!1 &185358089
@@ -666,9 +666,9 @@ MonoBehaviour:
   maxAmmoGathered: 0
   minSurvivorsFound: 0
   maxSurvivorsFound: 0
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
+  zombieIncreaseChance: 0.1
+  minZombieIncreaseCount: 1
+  maxZombieIncreaseCount: 2
   zombieAttackChance: 0
   taskProgressBar: {fileID: 544351216}
 --- !u!1 &410087039
@@ -1669,9 +1669,9 @@ MonoBehaviour:
   maxAmmoGathered: 0
   minSurvivorsFound: 1
   maxSurvivorsFound: 6
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
+  zombieIncreaseChance: 0.3
+  minZombieIncreaseCount: 3
+  maxZombieIncreaseCount: 6
   zombieAttackChance: 0
   taskProgressBar: {fileID: 185358091}
 --- !u!1 &813524872
@@ -3317,9 +3317,9 @@ MonoBehaviour:
   maxAmmoGathered: 0
   minSurvivorsFound: 0
   maxSurvivorsFound: 5
-  zombieIncreaseChance: 0
-  minZombieIncreaseCount: 0
-  maxZombieIncreaseCount: 0
+  zombieIncreaseChance: 0.15
+  minZombieIncreaseCount: 1
+  maxZombieIncreaseCount: 4
   zombieAttackChance: 0
   taskProgressBar: {fileID: 744988325}
 --- !u!1 &1953417054
