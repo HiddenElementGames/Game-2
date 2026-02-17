@@ -625,6 +625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf8b715587bb784b8b71aa7fe231dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  minAmmoCost: 2
+  maxAmmoCost: 5
+  zombieKillDelay: 1.5
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
