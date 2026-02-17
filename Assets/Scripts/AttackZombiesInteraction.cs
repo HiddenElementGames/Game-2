@@ -27,7 +27,7 @@ public class AttackZombiesInteraction : MonoBehaviour
             // if the player hit a zombie, kill it
             if(Physics.Raycast(ray, out hit) && hit.transform.CompareTag("Zombie"))
             {
-				Destroy(hit.transform.gameObject);
+                hit.transform.gameObject.GetComponent<ZombieDeath>().Die();
 			}
         }
     }

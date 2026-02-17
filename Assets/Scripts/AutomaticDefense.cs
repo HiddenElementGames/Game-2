@@ -26,7 +26,7 @@ public class AutomaticDefense : MonoBehaviour
 			else if(GameManager.Instance.DefenseItemCount > 0)
 			{
 				GameManager.Instance.DefenseItemCount--;
-				Destroy(other.gameObject);
+				other.gameObject.GetComponent<ZombieDeath>().Die();
 			}
 			// keeping the above 2 situations separate, that way we can properly subtract defense count or ammo count when the time comes
 		}
@@ -43,6 +43,6 @@ public class AutomaticDefense : MonoBehaviour
 		GameManager.Instance.AmmoCount -= ammoCost;
 
 		// kill zombie
-		Destroy(zombie);
+		zombie.GetComponent<ZombieDeath>().Die();
 	}
 }
