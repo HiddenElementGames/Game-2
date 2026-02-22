@@ -18,7 +18,7 @@ public class AttackZombiesInteraction : MonoBehaviour
     void Update()
     {
         // only run if the player pressed the LMB
-        if(mouse.leftButton.wasPressedThisFrame)
+        if(mouse.leftButton.wasPressedThisFrame && GameManager.Instance.AmmoCount > 0)
         {
             // create a ray from the camera at the current mouse position
             Ray ray = cam.ScreenPointToRay(mouse.position.value);
@@ -27,6 +27,7 @@ public class AttackZombiesInteraction : MonoBehaviour
             // if the player hit a zombie, kill it
             if(Physics.Raycast(ray, out hit) && hit.transform.CompareTag("Zombie"))
             {
+                GameManager.Instance.AmmoCount--;
                 hit.transform.gameObject.GetComponent<ZombieDeath>().Die();
 			}
         }
