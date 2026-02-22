@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Craft.unity
+    path: Assets/Scenes/Cut/Craft.unity
     guid: 4033694fba5cec84383ffade0127a7e7
   - enabled: 1
     path: Assets/Scenes/Defense.unity
@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Options Credits.unity
     guid: e4496b882d088f54aa1904d5e900748c
   - enabled: 1
-    path: Assets/Scenes/Sacrifice.unity
+    path: Assets/Scenes/Cut/Sacrifice.unity
     guid: cd7730cbe99e4d74a96cd0e8cbacdf24
   - enabled: 1
-    path: Assets/Scenes/Survivor.unity
+    path: Assets/Scenes/Cut/Survivor.unity
     guid: c469e3da93a76a9448e070e104f42f87
   - enabled: 1
     path: Assets/Scenes/Wild.unity
