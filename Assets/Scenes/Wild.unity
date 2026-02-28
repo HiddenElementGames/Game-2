@@ -166,9 +166,9 @@ MonoBehaviour:
   defaultScavengeTimeSeconds: 5
   minScavengeTimeSeconds: 0.1
   survivorTimeScaleRate: 0.01
-  minFoodGathered: 0
-  maxFoodGathered: 1
-  minAmmoGathered: 0
+  minDefensesGathered: 0
+  maxDefensesGathered: 0
+  minAmmoGathered: 1
   maxAmmoGathered: 5
   minSurvivorsFound: 0
   maxSurvivorsFound: 1
@@ -224,8 +224,8 @@ MonoBehaviour:
   defaultScavengeTimeSeconds: 5
   minScavengeTimeSeconds: 0.1
   survivorTimeScaleRate: 0.01
-  minFoodGathered: 1
-  maxFoodGathered: 5
+  minDefensesGathered: 0
+  maxDefensesGathered: 0
   minAmmoGathered: 0
   maxAmmoGathered: 1
   minSurvivorsFound: 0
@@ -660,8 +660,8 @@ MonoBehaviour:
   defaultScavengeTimeSeconds: 5
   minScavengeTimeSeconds: 0.1
   survivorTimeScaleRate: 0.01
-  minFoodGathered: 1
-  maxFoodGathered: 6
+  minDefensesGathered: 0
+  maxDefensesGathered: 0
   minAmmoGathered: 0
   maxAmmoGathered: 0
   minSurvivorsFound: 0
@@ -1536,8 +1536,8 @@ MonoBehaviour:
   defaultScavengeTimeSeconds: 5
   minScavengeTimeSeconds: 0.1
   survivorTimeScaleRate: 0.01
-  minFoodGathered: 0
-  maxFoodGathered: 0
+  minDefensesGathered: 0
+  maxDefensesGathered: 0
   minAmmoGathered: 0
   maxAmmoGathered: 0
   minSurvivorsFound: 1
@@ -3184,12 +3184,12 @@ MonoBehaviour:
   defaultScavengeTimeSeconds: 5
   minScavengeTimeSeconds: 0.1
   survivorTimeScaleRate: 0.01
-  minFoodGathered: 2
-  maxFoodGathered: 5
+  minDefensesGathered: 1
+  maxDefensesGathered: 5
   minAmmoGathered: 0
   maxAmmoGathered: 0
   minSurvivorsFound: 0
-  maxSurvivorsFound: 5
+  maxSurvivorsFound: 1
   zombieIncreaseChance: 0.15
   minZombieIncreaseCount: 1
   maxZombieIncreaseCount: 4
