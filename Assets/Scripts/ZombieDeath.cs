@@ -7,6 +7,7 @@ public class ZombieDeath : MonoBehaviour
     public void Die()
     {
         //RollLoot();
+        GameManager.Instance.ZombieCount--;
         Destroy(gameObject);
     }
 

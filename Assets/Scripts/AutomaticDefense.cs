@@ -28,9 +28,27 @@ public class AutomaticDefense : MonoBehaviour
 				GameManager.Instance.DefenseItemCount--;
 				other.gameObject.GetComponent<ZombieDeath>().Die();
 			}
+			else
+            {
+                StartCoroutine(ZombieAttackSurvivors());
+            }
 			// keeping the above 2 situations separate, that way we can properly subtract defense count or ammo count when the time comes
 		}
 	}
+
+	private IEnumerator ZombieAttackSurvivors()
+    {
+		yield return zombieKillDelay;
+        while(true)
+        {
+            yield return new WaitForSeconds(1f);
+			if(GameManager.Instance.SurvivorCount > 0)
+            {
+                int killCount = Mathf.Max(1, GameManager.Instance.SurvivorCount / 100);
+				GameManager.Instance.SurvivorCount -= killCount;
+            }
+        }
+    }
 
 	private IEnumerator AttackZombieDelayed(GameObject zombie)
 	{

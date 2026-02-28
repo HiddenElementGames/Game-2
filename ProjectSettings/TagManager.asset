@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Zombie
   - Defense
+  - Button
   layers:
   - Default
   - TransparentFX
