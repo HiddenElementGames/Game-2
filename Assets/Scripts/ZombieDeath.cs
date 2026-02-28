@@ -6,7 +6,7 @@ public class ZombieDeath : MonoBehaviour
 
     public void Die()
     {
-        RollLoot();
+        //RollLoot();
         Destroy(gameObject);
     }
 
