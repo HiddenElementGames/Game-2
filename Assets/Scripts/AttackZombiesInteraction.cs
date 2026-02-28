@@ -6,10 +6,21 @@ public class AttackZombiesInteraction : MonoBehaviour
     private Camera cam;
     private Mouse mouse;
 
+    private AudioSource buttonAudio;
+
     private void Start()
     {
         cam = GetComponent<Camera>();
         mouse = Mouse.current;
+
+        AudioSource[] audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        foreach(AudioSource audio in audioSources)
+        {
+            if(audio.gameObject.tag == "Button")
+            {
+                buttonAudio = audio;
+            }
+        }
     }
 
     /// <summary>
@@ -29,6 +40,7 @@ public class AttackZombiesInteraction : MonoBehaviour
             {
                 GameManager.Instance.AmmoCount--;
                 hit.transform.gameObject.GetComponent<ZombieDeath>().Die();
+                buttonAudio.PlayOneShot(buttonAudio.clip);
 			}
         }
     }
