@@ -9,8 +9,8 @@ public class ScavengeAction : MonoBehaviour
 	[SerializeField, Tooltip("The rate that survivors affect the time scale for this task."), Min(0)] private float survivorTimeScaleRate;
 
     [Header("Resources")]
-    [SerializeField, Tooltip("The minimum amount of food the player can gather from this task"), Min(0)] private int minFoodGathered;
-    [SerializeField, Tooltip("The maximum amount of food the player can gather from this task"), Min(0)] private int maxFoodGathered;
+    [SerializeField, Tooltip("The minimum amount of defenses the player can gather from this task"), Min(0)] private int minDefensesGathered;
+    [SerializeField, Tooltip("The maximum amount of defenses the player can gather from this task"), Min(0)] private int maxDefensesGathered;
     [SerializeField, Tooltip("The minimum amount of ammo the player can gather from this task"), Min(0)] private int minAmmoGathered;
     [SerializeField, Tooltip("The maximum amount of ammo the player can gather from this task"), Min(0)] private int maxAmmoGathered;
     [SerializeField, Tooltip("The minimum amount of survivors the player can find from this task"), Min(0)] private int minSurvivorsFound;
@@ -64,7 +64,7 @@ public class ScavengeAction : MonoBehaviour
 	/// </summary>
 	private void CompleteTask()
     {
-        GameManager.Instance.FoodCount += Random.Range(minFoodGathered, maxFoodGathered + 1);
+        GameManager.Instance.DefenseItemCount += Random.Range(minDefensesGathered, maxDefensesGathered + 1);
         GameManager.Instance.AmmoCount += Random.Range(minAmmoGathered, maxAmmoGathered + 1);
         GameManager.Instance.SurvivorCount += Random.Range(minSurvivorsFound, maxSurvivorsFound + 1);
 
