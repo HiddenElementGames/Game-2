@@ -38,7 +38,7 @@ public class ZombieSpawner : MonoBehaviour
             if(GameManager.Instance.ZombieCount > 0 && activeZombies.Count < GameManager.Instance.ZombieCount)
             {
                 GameObject newZombie = Instantiate(zombiePrefab, transform.position, Quaternion.identity);
-                newZombie.transform.position += new Vector3(0, 0, Random.Range(-5, 5));
+                newZombie.transform.position += new Vector3(0, 0, Random.Range(-4f, 4f));
 
                 activeZombies.Add(newZombie);
             }
